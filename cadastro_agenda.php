@@ -26,15 +26,15 @@
    
 
 
-    $sql = "INSERT INTO agenda (nome_agenda, apelido, endereco, bairro, cidade, estado, telefone, celular, email, dt_cadastro)";
+    $sql = "INSERT INTO agenda (nome, apelido, endereco, bairro, cidade, estado, telefone, celular, email, dt_cadastro)";
 
-    $sql .= " VALUES ('".$nome."','".$apelido."','".$endereco."','".$bairro."','".$cidade."','".$estado."','".$telefone."','".$celular."','".$email."')";
+    $sql .= " VALUES ('".$nome."','".$apelido."','".$endereco."','".$bairro."','".$cidade."','".$estado."','".$telefone."','".$celular."','".$email."','".$dt_cadastro."')";
 
-    echo $sql."<br>";
+   // echo $sql."<br>";
     $result = mysqli_query($con, $sql);
 
     if ($result)
-        echo "Dados cadastrados com sucesso!";
+        echo "<h1>Dados cadastrados com sucesso!</h1>";
     else
         echo "Erro ao tentar cadastrar!";
         
