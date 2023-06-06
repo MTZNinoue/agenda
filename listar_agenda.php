@@ -16,8 +16,9 @@
     $row = mysqli_fetch_array($result);
     ?>
     <h1>Consulta de agendas</h1>
-    <table align="center" border="1" width="500">
+    <table align="center" border="1" width="1300">
         <tr>
+            <th>Foto</th>
             <th>Codigo</th>
             <th>Nome</th>
             <th>Apelido</th>
@@ -33,9 +34,15 @@
         </tr>
     
     <?php
-     do{
-     echo "<tr>";
-     echo "<td>".$row['id_agenda']."</td>";
+    do{
+      if($row)
+      {
+          echo "<tr>";
+          echo "<td>".$row['id_agenda']."</td>";
+          if($row['foto'] == "")
+              echo "<td></td>";
+          else
+              echo "<td><img src='".$row['foto']."'width='80' height='100'/></td>";
      echo "<td>".$row['nome']."</td>";
      echo "<td>".$row['apelido']."</td>";
      echo "<td>".$row['endereco']."</td>";
@@ -50,8 +57,7 @@
                 .$row['id_agenda']."'>Alterar</a> </td>";
      echo "<td><a href='deletar_agenda.php?id_agenda="
                 .$row['id_agenda']."'>Deletar</a> </td>";
-                
-     echo "</tr>";
+     echo "</tr>";}
      }while($row = mysqli_fetch_array($result))
     ?>
     <a href="index.php">Voltar</a>

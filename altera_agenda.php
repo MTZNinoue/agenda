@@ -98,6 +98,9 @@
             value="<?php echo $row['email'] ?>">
         </div>
         <div>
+        <input type="file" name="foto" accept="image/*">
+        </div>
+        <div>
             <input type="submit" value="Salvar">
         </div>
 

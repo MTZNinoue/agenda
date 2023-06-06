@@ -1,5 +1,13 @@
 <?php  
     include('conexao.php');
+
+    $nome_foto = "";
+    if(file_exists($_FILES['foto']['tmp_name'])){
+        $pasta_destino = 'foto/';
+        $extensao = strtolower(substr($_FILES['foto']['name'],-4));
+        $nome_foto = $pasta_destino . date("Ymd-His") . $extensao;
+        move_uploaded_file($_FILES['foto']['tmp_name'], $nome_foto);
+        }
     $id_agenda = $_POST['id_agenda'];
     $nome = $_POST['nome'];
     $apelido = $_POST['apelido'];
@@ -22,7 +30,8 @@
             estado='$estado',
             telefone='$telefone',
             celular='$celular',
-            email='$email'
+            email='$email',
+            foto='$nome_foto'
             WHERE id_agenda=$id_agenda";
         
     //echo $sql. "<br>";
