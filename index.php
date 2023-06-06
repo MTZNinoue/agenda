@@ -10,10 +10,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Pagina Inicial - Projeto Cadastro IFSP</h3>
+    <h3>Pagina Inicial - Agenda IFSP</h3>
     <?php  
         if(!empty($_SESSION['login'])){
-            echo "<h4> Óla ". $_SESSION['login']['nome_usuario']."</h4>";
+            echo "<h4> Óla ". $_SESSION['login']['nome']."</h4>";
             echo "<a href='logout.php'>Sair</a>";
         }
    ?>
