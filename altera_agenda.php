@@ -1,7 +1,7 @@
 <?php
     include('conexao.php');
-    $id_usuario = $_GET['id_usuario'];
-    $sql = "SELECT * FROM usuario where id_usuario=$id_usuario";
+    $id_agenda = $_GET['id_agenda'];
+    $sql = "SELECT * FROM agenda where id_agenda=$id_agenda";
     $result = mysqli_query($con,$sql);
     $row = mysqli_fetch_array($result)
 ?>
@@ -14,11 +14,11 @@
     <title>Document</title>
 </head>
 <body>
-    <!--http://localhost/PRW/Banco%20de%20dados/Aulas/altera_usuario?id_usuario=1 -->
-    <h1>Cadastro de Usuarios - IFSP</h1>
+    <!--http://localhost/PRW/Banco%20de%20dados/Aulas/altera_agenda?id_agenda=1 -->
+    <h1>Cadastro de agenta - IFSP</h1>
     <form action="altera_agenda_exe.php" method="POST" enctype="multipart/form-data">
         <input name="id_agenda" type="hidden"
-            value="<?php echo $row['id_usuario'] ?>"> 
+            value="<?php echo $row['id_agenda'] ?>"> 
     <div>
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome"

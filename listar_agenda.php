@@ -45,7 +45,7 @@
      echo "<td>".$row['telefone']."</td>";
      echo "<td>".$row['celular']."</td>";
      echo "<td>".$row['email']."</td>";
-     echo "<td>".$row['dt cadastro']."</td>";
+     echo "<td>".$row['dt_cadastro']."</td>";
      echo "<td><a href='altera_agenda.php?id_agenda="
                 .$row['id_agenda']."'>Alterar</a> </td>";
      echo "<td><a href='deletar_agenda.php?id_agenda="
