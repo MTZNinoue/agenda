@@ -45,7 +45,7 @@
     '".$bairro."','".$cidade."','".$estado."','".$telefone."',
     '".$celular."','".$email."','".$dt_cadastro."','".$nome_foto."')";
 
-    //echo $sql."<br>";
+    echo $sql."<br>";
     $result = mysqli_query($con, $sql);
 
     if ($result)

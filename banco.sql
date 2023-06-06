@@ -17,4 +17,3 @@ dt_cadastro date not null,
 foto varchar(100) not null,
 PRIMARY KEY (id_agenda)
 );
-
